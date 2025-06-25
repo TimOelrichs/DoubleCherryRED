@@ -3,7 +3,7 @@
 void retro_get_system_av_info(struct retro_system_av_info* info)
 {
     //videoLayoutManager.getAvInfo(info);
-}
+};
 
 
 

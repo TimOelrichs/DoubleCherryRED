@@ -82,6 +82,7 @@ void tv_remote::reset()
 	current_predefined_remote = 0;
 }
 
+/*
 void tv_remote::handle_special_hotkey(int key)
 {
 
@@ -105,6 +106,7 @@ void tv_remote::handle_special_hotkey(int key)
 	build_signal_frame(code);
 
 }
+*/
 
 void tv_remote::build_predefined_remotes()
 {
