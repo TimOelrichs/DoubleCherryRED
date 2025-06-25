@@ -1,0 +1,3 @@
+[submodule "external/DoubleCherryEngine"]
+	path = external/DoubleCherryEngine
+	url = https://github.com/TimOelrichs/DoubleCherryEngine
