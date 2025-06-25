@@ -16,16 +16,16 @@ public:
     std::vector<std::unique_ptr<TGBDualRenderer>> gameboyRenderers;
 
     // Get the number of emulated systems
-   int getActiveSystemsCount() override const {
+   int getActiveSystemsCount() override {
         return gameboyInstances.size();
     };
    
     // Get the number of max emulated systems
-   int getMaxSystemsCount() override const {
+   int getMaxSystemsCount() override {
        return kmaxGameboyInstancesCount_;
    };
 
-   ScreenSize getScreenSize() override const {
+   ScreenSize getSystemScreenSize()  {
        return screenSize_;
    };
 
