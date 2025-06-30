@@ -16,6 +16,7 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
+
 #include <DoubleCherryEngine/Renderer/VideoRenderer/VideoRenderer.hpp>
 #include <DoubleCherryEngine/ColorCorrection/ColorCorrectionManager.hpp>
 
@@ -51,7 +52,9 @@ public:
 	 void set_bibrate(bool bibrate) {}
 
 	 void render_screen(byte* buf, int width, int height, int depth) override { video_renderer.addFrame(id_, buf); };
-	 word map_color(word gbColor) override { colorCorrectionManager.applyCorrection(gbColor); };
+	 word map_color(word gbColor) override {
+		 return gbColor;
+	 }; //TODO: colorCorrectionManager.applyCorrection(gbColor); };
 	 word unmap_color(word gbColor) { return gbColor; }; //TODO
 	 int check_pad() ;
 	 void refresh();
@@ -63,7 +66,7 @@ public:
 	dword fixed_time;
 private:
 	VideoRenderer& video_renderer = VideoRenderer::getInstance();
-	ColorCorrectionManager& colorCorrectionManager = ColorCorrectionManager::getInstance();
+	//ColorCorrectionManager& colorCorrectionManager = ColorCorrectionManager::getInstance();
 	int id_;
 	int cur_time;
 	int which_gb;

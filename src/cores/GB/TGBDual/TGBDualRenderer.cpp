@@ -30,6 +30,7 @@
 
 
 void TGBDualRenderer::refresh() {
+    /*
     static int16_t stream[SAMPLES_PER_FRAME * 2];
     // static int16_t stream[SAMPLES_PER_FRAME];
 
@@ -54,6 +55,7 @@ void TGBDualRenderer::refresh() {
       else if (audio_2p_mode == which_gb)
       */
 
+    /*
         if (audio_2p_mode == which_gb)
         {
             // only play gb 0 or 1
@@ -80,7 +82,7 @@ void TGBDualRenderer::refresh() {
     }
     fixed_time = time(NULL);
 
-
+    */
 }
 
 int TGBDualRenderer::check_pad()
